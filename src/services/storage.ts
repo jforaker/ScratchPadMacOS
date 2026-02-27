@@ -48,7 +48,7 @@ export async function loadAllNotes(): Promise<Note[]> {
 
   if (ids.length === 0) return [];
 
-  const notes = await Promise.all(ids.map(id => loadNote(id)));
+  const notes = await Promise.all(ids.map((id) => loadNote(id)));
 
   return notes.filter((note): note is Note => note !== null);
 }
@@ -91,7 +91,7 @@ export async function createNote(): Promise<Note> {
 
 export async function deleteNote(id: string): Promise<void> {
   const ids = await loadNoteIndex();
-  const filtered = ids.filter(i => i !== id);
+  const filtered = ids.filter((i) => i !== id);
 
   await AsyncStorage.removeItem(noteKey(id));
   await saveNoteIndex(filtered);

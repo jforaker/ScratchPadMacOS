@@ -82,8 +82,8 @@ export default function ScratchPad() {
   const handleChangeText = (value: string) => {
     if (!activeNoteId) return;
 
-    setNotes(prev =>
-      prev.map(note =>
+    setNotes((prev) =>
+      prev.map((note) =>
         note.id === activeNoteId
           ? { ...note, content: value, updatedAt: Date.now() }
           : note,
@@ -101,8 +101,8 @@ export default function ScratchPad() {
         text: 'Clear',
         style: 'destructive',
         onPress: () => {
-          setNotes(prev =>
-            prev.map(note =>
+          setNotes((prev) =>
+            prev.map((note) =>
               note.id === activeNoteId ? { ...note, content: '' } : note,
             ),
           );
@@ -133,15 +133,15 @@ export default function ScratchPad() {
           }
 
           const currentIndex = notes.findIndex(
-            note => note.id === noteIdToDelete,
+            (note) => note.id === noteIdToDelete,
           );
-          const remaining = notes.filter(note => note.id !== noteIdToDelete);
+          const remaining = notes.filter((note) => note.id !== noteIdToDelete);
           const fallbackIndex = Math.min(currentIndex, remaining.length - 1);
           const nextSelection = remaining[Math.max(0, fallbackIndex)];
 
           setNotes(remaining);
           setSelectedNoteId(nextSelection?.id ?? null);
-          setColorPickerNoteId(current =>
+          setColorPickerNoteId((current) =>
             current === noteIdToDelete ? null : current,
           );
           await deleteNote(noteIdToDelete);
@@ -152,7 +152,7 @@ export default function ScratchPad() {
 
   const handleAddNote = async () => {
     const note = await createNote();
-    setNotes(prev => [...prev, note]);
+    setNotes((prev) => [...prev, note]);
     setSelectedNoteId(note.id);
   };
 
@@ -164,8 +164,8 @@ export default function ScratchPad() {
   };
 
   const handleSelectNoteColor = (noteId: string, color: string | null) => {
-    setNotes(prev =>
-      prev.map(note => (note.id === noteId ? { ...note, color } : note)),
+    setNotes((prev) =>
+      prev.map((note) => (note.id === noteId ? { ...note, color } : note)),
     );
     setSelectedNoteId(noteId);
     setColorPickerNoteId(null);
@@ -176,18 +176,19 @@ export default function ScratchPad() {
     const mouseButton = (event.nativeEvent as { button?: number }).button;
     if (mouseButton === 2) {
       setSelectedNoteId(noteId);
-      setColorPickerNoteId(current => (current === noteId ? null : noteId));
+      setColorPickerNoteId((current) => (current === noteId ? null : noteId));
     }
   };
 
   const selectedNote = useMemo(
-    () => notes.find(note => note.id === activeNoteId) ?? null,
+    () => notes.find((note) => note.id === activeNoteId) ?? null,
     [notes, activeNoteId],
   );
 
   const getNoteTitle = (note: Note, index: number): string => {
     const trimmed = note.content.trim();
     if (trimmed.length === 0) return `note #${index + 1}`;
+
     return trimmed.slice(0, 20);
   };
 
@@ -195,7 +196,7 @@ export default function ScratchPad() {
     <View style={styles.container}>
       <View style={styles.header}>
         <TouchableOpacity
-          onPress={() => setIsSidebarCollapsed(prev => !prev)}
+          onPress={() => setIsSidebarCollapsed((prev) => !prev)}
           style={styles.sidebarToggle}
         >
           <Text style={styles.sidebarToggleText}>
@@ -258,7 +259,7 @@ export default function ScratchPad() {
                           setColorPickerNoteId(null);
                         }
                       }}
-                      onPressIn={event => handleNotePressIn(note.id, event)}
+                      onPressIn={(event) => handleNotePressIn(note.id, event)}
                       style={[
                         styles.noteItem,
                         isSelected && styles.noteItemSelected,
@@ -288,7 +289,7 @@ export default function ScratchPad() {
                           { borderColor: theme.colors.headerBorder },
                         ]}
                       >
-                        {SIDEBAR_COLOR_OPTIONS.map(color => {
+                        {SIDEBAR_COLOR_OPTIONS.map((color) => {
                           const isSelectedColor =
                             color.toLowerCase() === note.color?.toLowerCase();
                           return (
@@ -360,7 +361,7 @@ export default function ScratchPad() {
   );
 }
 
-const stylesheet = createStyleSheet(theme => ({
+const stylesheet = createStyleSheet((theme) => ({
   container: {
     flex: 1,
     backgroundColor: theme.colors.background,

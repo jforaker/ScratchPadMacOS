@@ -57,7 +57,7 @@ export const darkColors = {
   clearButtonText: '#FFFFFF',
 } as const;
 
-export type ThemeColors = {[K in keyof typeof lightColors]: string};
+export type ThemeColors = { [K in keyof typeof lightColors]: string };
 
 export interface AppTheme {
   colors: ThemeColors;
