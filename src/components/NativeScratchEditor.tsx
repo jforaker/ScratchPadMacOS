@@ -10,6 +10,7 @@ interface NativeScratchEditorNativeProps {
   text: string;
   placeholder?: string;
   fontSize?: number;
+  fontFamily?: string;
   darkMode?: boolean;
   onChange?: (event: NativeSyntheticEvent<{ text: string }>) => void;
   style?: StyleProp<ViewStyle>;
@@ -23,6 +24,7 @@ interface NativeScratchEditorProps {
   onChangeText?: (text: string) => void;
   placeholder?: string;
   fontSize?: number;
+  fontFamily?: string;
   darkMode?: boolean;
   style?: StyleProp<ViewStyle>;
 }
@@ -32,6 +34,7 @@ export default function NativeScratchEditor({
   onChangeText,
   placeholder,
   fontSize = 15,
+  fontFamily,
   darkMode = false,
   style,
 }: NativeScratchEditorProps) {
@@ -47,6 +50,7 @@ export default function NativeScratchEditor({
       text={text}
       placeholder={placeholder}
       fontSize={fontSize}
+      fontFamily={fontFamily}
       darkMode={darkMode}
       onChange={handleChange}
       style={style}

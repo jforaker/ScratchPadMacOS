@@ -5,22 +5,31 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "macos": "react-native run-macos --no-packager --port 8087",
-    "start:metro": "react-native start --port 8087 --reset-cache",
-    "start:macos": "react-native run-macos --project-path macos --no-packager --port 8087",
+    "macos": "node ./scripts/rn-cli-wrapper.js run-macos --no-packager --port 8087",
+    "start:metro": "node ./scripts/rn-cli-wrapper.js start --port 8087 --reset-cache",
+    "start:macos": "node ./scripts/rn-cli-wrapper.js run-macos --project-path macos --no-packager --port 8087",
+    "start:dev": "bash ./scripts/start-dev.sh",
+    "mega:clean": "bash ./scripts/mega-clean.sh",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^3.0.1",
+    "@react-native-vector-icons/ionicons": "^12.4.1",
     "@react-native/new-app-screen": "0.81.6",
+    "@tamagui/button": "^2.0.0-rc.20",
+    "@tamagui/config": "^2.0.0-rc.20",
+    "@tamagui/core": "^2.0.0-rc.20",
+    "@tamagui/native": "^2.0.0-rc.20",
+    "@tamagui/web": "^2.0.0-rc.20",
+    "lodash.debounce": "^4.0.8",
     "react": "19.1.4",
     "react-native": "0.81.6",
     "react-native-macos": "^0.81.3",
-    "react-native-unistyles": "2.43.0",
     "react-native-reanimated": "^3.19.5",
-    "react-native-safe-area-context": "^5.5.2"
+    "react-native-safe-area-context": "^5.5.2",
+    "react-native-unistyles": "2.43.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

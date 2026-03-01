@@ -8,6 +8,17 @@
 
 @implementation NativeScratchEditorView
 
+- (NSFont *)resolvedFontWithSize:(CGFloat)size
+{
+  if (_fontFamily.length > 0) {
+    NSFont *customFont = [NSFont fontWithName:_fontFamily size:size];
+    if (customFont != nil) {
+      return customFont;
+    }
+  }
+  return [NSFont systemFontOfSize:size];
+}
+
 - (instancetype)initWithFrame:(NSRect)frame
 {
   if (self = [super initWithFrame:frame]) {
@@ -42,7 +53,7 @@
   _textView.maxSize = NSMakeSize(CGFLOAT_MAX, CGFLOAT_MAX);
 
   // Text appearance (matches ScratchPad.swift)
-  _textView.font = [NSFont systemFontOfSize:_fontSize];
+  _textView.font = [self resolvedFontWithSize:_fontSize];
   _textView.backgroundColor = [NSColor clearColor];
   _textView.textContainerInset = NSMakeSize(14, 12);
   [self applyTheme];
@@ -107,7 +118,14 @@
 - (void)setFontSize:(CGFloat)fontSize
 {
   _fontSize = fontSize;
-  _textView.font = [NSFont systemFontOfSize:fontSize];
+  _textView.font = [self resolvedFontWithSize:fontSize];
+  [self applyTheme];
+}
+
+- (void)setFontFamily:(NSString *)fontFamily
+{
+  _fontFamily = [fontFamily copy];
+  _textView.font = [self resolvedFontWithSize:_fontSize];
   [self applyTheme];
 }
 
@@ -133,13 +151,16 @@
     typingAttrs = [NSMutableDictionary dictionary];
   }
   typingAttrs[NSForegroundColorAttributeName] = textColor;
-  typingAttrs[NSFontAttributeName] = [NSFont systemFontOfSize:_fontSize];
+  typingAttrs[NSFontAttributeName] = [self resolvedFontWithSize:_fontSize];
   _textView.typingAttributes = typingAttrs;
 
   NSRange fullRange = NSMakeRange(0, _textView.string.length);
   if (fullRange.length > 0) {
     [_textView.textStorage addAttribute:NSForegroundColorAttributeName
                                   value:textColor
+                                  range:fullRange];
+    [_textView.textStorage addAttribute:NSFontAttributeName
+                                  value:[self resolvedFontWithSize:_fontSize]
                                   range:fullRange];
   }
 
@@ -167,7 +188,7 @@
       ? [NSColor colorWithWhite:0.55 alpha:1.0]
       : [NSColor placeholderTextColor];
     NSDictionary *attrs = @{
-      NSFontAttributeName: [NSFont systemFontOfSize:_fontSize],
+      NSFontAttributeName: [self resolvedFontWithSize:_fontSize],
       NSForegroundColorAttributeName: placeholderColor,
     };
     NSRect insetRect = NSInsetRect(self.bounds, 14 + 5, 12); // match textContainerInset + lineFragmentPadding

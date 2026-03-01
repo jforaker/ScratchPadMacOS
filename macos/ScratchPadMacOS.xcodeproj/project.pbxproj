@@ -14,14 +14,15 @@
 		514201552437B4B40078DB4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 514201532437B4B40078DB4F /* Main.storyboard */; };
 		514201582437B4B40078DB4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 514201572437B4B40078DB4F /* main.m */; };
 		53DA227A45BB5C4338101D4E /* NativeScratchEditorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A5428C97CDCF4CB544FB86B /* NativeScratchEditorView.m */; };
-		570F8656DB6A99CDA3A17411 /* libPods-ScratchPadMacOS-macOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A11FECD74AFC2AFB7C164C /* libPods-ScratchPadMacOS-macOS.a */; };
+		652A9A4A6A8A43F8B6B9AC01 /* NotoSans-Variable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652A9A4A6A8A43F8B6B9AC02 /* NotoSans-Variable.ttf */; };
+		652A9A4A6A8A43F8B6B9AC03 /* NotoSans-Italic-Variable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 652A9A4A6A8A43F8B6B9AC04 /* NotoSans-Italic-Variable.ttf */; };
+		757ED0385929B2117EE932C0 /* libPods-ScratchPadMacOS-macOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 282810B6837BC544E2E76F1F /* libPods-ScratchPadMacOS-macOS.a */; };
 		CC7AC0C7900350F9D8A44A0C /* NativeScratchEditorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6848425F904275B75482F52D /* NativeScratchEditorManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		13B07F961A680F5B00A75B9A /* ScratchPadMacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScratchPadMacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		417F5939F4BDF0A64218A4D5 /* Pods-ScratchPadMacOS-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScratchPadMacOS-macOS.debug.xcconfig"; path = "Target Support Files/Pods-ScratchPadMacOS-macOS/Pods-ScratchPadMacOS-macOS.debug.xcconfig"; sourceTree = "<group>"; };
-		4F2AB60C0C777A3C15B7E26D /* Pods-ScratchPadMacOS-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScratchPadMacOS-macOS.release.xcconfig"; path = "Target Support Files/Pods-ScratchPadMacOS-macOS/Pods-ScratchPadMacOS-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		282810B6837BC544E2E76F1F /* libPods-ScratchPadMacOS-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScratchPadMacOS-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		514201492437B4B30078DB4F /* ScratchPadMacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScratchPadMacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5142014B2437B4B30078DB4F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5142014C2437B4B30078DB4F /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -30,11 +31,14 @@
 		514201562437B4B40078DB4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		514201572437B4B40078DB4F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		514201592437B4B40078DB4F /* ScratchPadMacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScratchPadMacOS.entitlements; sourceTree = "<group>"; };
+		652A9A4A6A8A43F8B6B9AC02 /* NotoSans-Variable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSans-Variable.ttf"; path = "../assets/fonts/NotoSans-Variable.ttf"; sourceTree = "<group>"; };
+		652A9A4A6A8A43F8B6B9AC04 /* NotoSans-Italic-Variable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSans-Italic-Variable.ttf"; path = "../assets/fonts/NotoSans-Italic-Variable.ttf"; sourceTree = "<group>"; };
 		6848425F904275B75482F52D /* NativeScratchEditorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NativeScratchEditorManager.m; sourceTree = "<group>"; };
+		725D54D1C4EB2659B47D9DFD /* Pods-ScratchPadMacOS-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScratchPadMacOS-macOS.debug.xcconfig"; path = "Target Support Files/Pods-ScratchPadMacOS-macOS/Pods-ScratchPadMacOS-macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		7A5428C97CDCF4CB544FB86B /* NativeScratchEditorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NativeScratchEditorView.m; sourceTree = "<group>"; };
 		7A982EEB1587FB619A474166 /* NativeScratchEditorView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NativeScratchEditorView.h; sourceTree = "<group>"; };
+		7EBEB735B7D3D4F6FBC8F914 /* Pods-ScratchPadMacOS-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScratchPadMacOS-macOS.release.xcconfig"; path = "Target Support Files/Pods-ScratchPadMacOS-macOS/Pods-ScratchPadMacOS-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		B546148B0FC1D80B54993F92 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		E8A11FECD74AFC2AFB7C164C /* libPods-ScratchPadMacOS-macOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScratchPadMacOS-macOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -50,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				570F8656DB6A99CDA3A17411 /* libPods-ScratchPadMacOS-macOS.a in Frameworks */,
+				757ED0385929B2117EE932C0 /* libPods-ScratchPadMacOS-macOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				E8A11FECD74AFC2AFB7C164C /* libPods-ScratchPadMacOS-macOS.a */,
+				282810B6837BC544E2E76F1F /* libPods-ScratchPadMacOS-macOS.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -76,6 +80,8 @@
 				514201562437B4B40078DB4F /* Info.plist */,
 				514201572437B4B40078DB4F /* main.m */,
 				514201592437B4B40078DB4F /* ScratchPadMacOS.entitlements */,
+				652A9A4A6A8A43F8B6B9AC02 /* NotoSans-Variable.ttf */,
+				652A9A4A6A8A43F8B6B9AC04 /* NotoSans-Italic-Variable.ttf */,
 				7A982EEB1587FB619A474166 /* NativeScratchEditorView.h */,
 				7A5428C97CDCF4CB544FB86B /* NativeScratchEditorView.m */,
 				6848425F904275B75482F52D /* NativeScratchEditorManager.m */,
@@ -98,7 +104,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				B546148B0FC1D80B54993F92 /* PrivacyInfo.xcprivacy */,
-				99F1DF7C4FA9EEA58A90DC1A /* Pods */,
+				CB0DC6A3A33B98E7E8248497 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -114,11 +120,11 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		99F1DF7C4FA9EEA58A90DC1A /* Pods */ = {
+		CB0DC6A3A33B98E7E8248497 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				417F5939F4BDF0A64218A4D5 /* Pods-ScratchPadMacOS-macOS.debug.xcconfig */,
-				4F2AB60C0C777A3C15B7E26D /* Pods-ScratchPadMacOS-macOS.release.xcconfig */,
+				725D54D1C4EB2659B47D9DFD /* Pods-ScratchPadMacOS-macOS.debug.xcconfig */,
+				7EBEB735B7D3D4F6FBC8F914 /* Pods-ScratchPadMacOS-macOS.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -149,13 +155,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5142015A2437B4B40078DB4F /* Build configuration list for PBXNativeTarget "ScratchPadMacOS-macOS" */;
 			buildPhases = (
-				1A938104A937498D81B3BD3B /* [CP] Check Pods Manifest.lock */,
+				9A63753E0D98F1579873059F /* [CP] Check Pods Manifest.lock */,
 				514201452437B4B30078DB4F /* Sources */,
 				514201462437B4B30078DB4F /* Frameworks */,
 				514201472437B4B30078DB4F /* Resources */,
 				381D8A6E24576A4E00465D17 /* Bundle React Native code and images */,
-				17D4E312FE33735B26133B23 /* [CP] Embed Pods Frameworks */,
-				28C6564BE600EB81665206EC /* [CP] Copy Pods Resources */,
+				40283201433A99DFC74DB2F7 /* [CP] Embed Pods Frameworks */,
+				6FAD8D2758959EFC4BD4C575 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,6 +223,8 @@
 			files = (
 				514201522437B4B40078DB4F /* Assets.xcassets in Resources */,
 				514201552437B4B40078DB4F /* Main.storyboard in Resources */,
+				652A9A4A6A8A43F8B6B9AC01 /* NotoSans-Variable.ttf in Resources */,
+				652A9A4A6A8A43F8B6B9AC03 /* NotoSans-Italic-Variable.ttf in Resources */,
 				4DEB51F097F099723D5E9EF0 /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,7 +246,25 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native-macos/scripts/react-native-xcode.sh\n";
 		};
-		17D4E312FE33735B26133B23 /* [CP] Embed Pods Frameworks */ = {
+		381D8A6E24576A4E00465D17 /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native-macos/scripts/react-native-xcode.sh\n";
+		};
+		40283201433A99DFC74DB2F7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -256,29 +282,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScratchPadMacOS-macOS/Pods-ScratchPadMacOS-macOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1A938104A937498D81B3BD3B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ScratchPadMacOS-macOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		28C6564BE600EB81665206EC /* [CP] Copy Pods Resources */ = {
+		6FAD8D2758959EFC4BD4C575 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -306,7 +310,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScratchPadMacOS-macOS/Pods-ScratchPadMacOS-macOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		381D8A6E24576A4E00465D17 /* Bundle React Native code and images */ = {
+		9A63753E0D98F1579873059F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -314,15 +318,19 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Bundle React Native code and images";
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScratchPadMacOS-macOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native-macos/scripts/react-native-xcode.sh\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -403,7 +411,7 @@
 		};
 		5142015B2437B4B40078DB4F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 417F5939F4BDF0A64218A4D5 /* Pods-ScratchPadMacOS-macOS.debug.xcconfig */;
+			baseConfigurationReference = 725D54D1C4EB2659B47D9DFD /* Pods-ScratchPadMacOS-macOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -427,7 +435,7 @@
 		};
 		5142015C2437B4B40078DB4F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F2AB60C0C777A3C15B7E26D /* Pods-ScratchPadMacOS-macOS.release.xcconfig */;
+			baseConfigurationReference = 7EBEB735B7D3D4F6FBC8F914 /* Pods-ScratchPadMacOS-macOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

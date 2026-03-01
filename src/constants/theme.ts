@@ -13,7 +13,7 @@ const baseTypography = {
   fontSize: 15,
   headerFontSize: 16,
   listFontSize: 13,
-  fontFamily: undefined, // system font
+  fontFamily: 'Noto Sans',
 } as const;
 
 const baseRadius = {
@@ -30,30 +30,30 @@ const baseLayout = {
 } as const;
 
 export const lightColors = {
-  background: '#FFFCEE',
-  text: '#1F1F1F',
-  headerBackground: '#FFF9E0',
-  headerBorder: '#E8E4D4',
-  clearButton: '#C44B3F',
+  background: '#F8F4E6',
+  text: '#2B2A26',
+  headerBackground: '#FFF9E8',
+  headerBorder: '#E6DEC8',
+  clearButton: '#BE4A3F',
   clearButtonPressed: '#A33D33',
-  placeholder: '#999999',
-  sidebarSelected: '#EFE9D2',
-  addButtonBackground: '#F8F1D7',
-  iconButtonBackground: '#ECE4C4',
+  placeholder: '#8D8778',
+  sidebarSelected: '#EFE4C6',
+  addButtonBackground: '#F2E7C9',
+  iconButtonBackground: '#E9DDBD',
   clearButtonText: '#FFFFFF',
 } as const;
 
 export const darkColors = {
-  background: '#1B1B1B',
-  text: '#F1F1F1',
-  headerBackground: '#242424',
-  headerBorder: '#343434',
-  clearButton: '#B34A3E',
+  background: '#171715',
+  text: '#ECE7D8',
+  headerBackground: '#1E1E1B',
+  headerBorder: '#30302C',
+  clearButton: '#A5483F',
   clearButtonPressed: '#923B32',
-  placeholder: '#8F8F8F',
-  sidebarSelected: '#303030',
-  addButtonBackground: '#2A2A2A',
-  iconButtonBackground: '#353535',
+  placeholder: '#8D897C',
+  sidebarSelected: '#2A2924',
+  addButtonBackground: '#24231F',
+  iconButtonBackground: '#33312A',
   clearButtonText: '#FFFFFF',
 } as const;
 

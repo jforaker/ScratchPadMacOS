@@ -27,12 +27,16 @@ yarn start:macos
   - Starts Metro on `8087` with `--reset-cache`.
 - `yarn start:macos`
   - Builds/runs macOS app, connects to Metro on `8087`, no internal packager.
+- `npm run start:dev`
+  - Opens/uses Terminal.app, ensures 2 tabs, and runs Metro + macOS app (one command kickoff).
 - `yarn macos`
   - Alias run command for macOS (also no packager, port `8087`).
 - `yarn lint`
   - Runs ESLint.
 - `yarn test`
   - Runs Jest.
+- `yarn mega:clean`
+  - Nuclear reset: kills project RN/Metro processes, clears caches/build artifacts, reinstalls JS deps with Yarn (with timeout), and reinstalls iOS + macOS pods (fast pod mode by default).
 
 ## Process Reset (When Things Get Weird)
 
@@ -71,6 +75,41 @@ pod deintegrate
 rm -rf Pods Podfile.lock
 pod install --repo-update
 cd ..
+```
+
+## When Things Go Awry (Mega Clean)
+
+Run this one-shot reset script:
+
+```bash
+yarn mega:clean
+```
+
+It does all of this:
+- Stops common Metro / React Native / app processes
+- Clears watchman + Metro + haste temp caches
+- Clears local native build folders
+- Removes and reinstalls JS dependencies with Yarn (`yarn install --frozen-lockfile --non-interactive --check-files`)
+- Deintegrates and reinstalls CocoaPods in both `ios/` and `macos/` (without repo refresh)
+
+Useful env vars:
+```bash
+# Default: 900 seconds
+MEGA_CLEAN_YARN_TIMEOUT_SEC=1200 yarn mega:clean
+
+# Optional: use a different port pattern for process cleanup
+MEGA_CLEAN_PORT=8087 yarn mega:clean
+```
+
+Need a full CocoaPods specs refresh?
+```bash
+MEGA_CLEAN_REPO_UPDATE=1 yarn mega:clean
+```
+
+After it finishes:
+```bash
+yarn start:metro
+yarn start:macos
 ```
 
 ## Common Errors

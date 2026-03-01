@@ -1,0 +1,17 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/NotoSans-Italic-Variable.ttf",
+      "sha1": "5186dcd54fbf7967ae342b5fc718e95cc0f00ac9"
+    },
+    {
+      "path": "assets/fonts/NotoSans-Variable.ttf",
+      "sha1": "e1487b2a5a5bc85de552d839e069ddb5fba43b21"
+    },
+    {
+      "path": "assets/fonts/OFL.txt",
+      "sha1": "af866b5e74511e0227cb84a1d9da497f13f582f7"
+    }
+  ]
+}
