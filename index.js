@@ -1,7 +1,9 @@
 import { AppRegistry, NativeModules } from 'react-native';
-import '@tamagui/native/setup-zeego';
+import Ionicons from '@react-native-vector-icons/ionicons';
 import App from './App';
 import { name as appName } from './app.json';
+
+Ionicons.loadFont?.();
 
 if (typeof global.matchMedia !== 'function') {
   global.matchMedia = () => ({

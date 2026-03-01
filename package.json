@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "macos": "node ./scripts/rn-cli-wrapper.js run-macos --no-packager --port 8087",
     "start:metro": "node ./scripts/rn-cli-wrapper.js start --port 8087 --reset-cache",
-    "start:macos": "node ./scripts/rn-cli-wrapper.js run-macos --project-path macos --no-packager --port 8087",
+    "codegen:macos": "node ./node_modules/react-native-macos/scripts/generate-codegen-artifacts.js -p . -o macos -t ios",
+    "start:macos": "npm run codegen:macos && node ./scripts/rn-cli-wrapper.js run-macos --project-path macos --no-packager --port 8087",
     "start:dev": "bash ./scripts/start-dev.sh",
     "mega:clean": "bash ./scripts/mega-clean.sh",
     "lint": "eslint .",
@@ -29,7 +30,8 @@
     "react-native-macos": "^0.81.3",
     "react-native-reanimated": "^3.19.5",
     "react-native-safe-area-context": "^5.5.2",
-    "react-native-unistyles": "2.43.0"
+    "react-native-unistyles": "2.43.0",
+    "react-native-vector-icons": "^10.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
